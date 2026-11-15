@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101b20">
+  <meta name="description" content="SignFrame AI: experimental webcam fingerspelling recognition using hand detection and a local neural network.">
+  <title>SignFrame AI | Live ASL Recognition</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <header class="topbar">
+    <div class="mark">S<span>F</span></div>
+    <div class="brand"><h1>SignFrame <em>AI</em></h1><p>ASL fingerspelling · Webcam recognition · Text-to-speech</p></div>
+    <span class="beta">EXPERIMENTAL DEMO</span>
+  </header>
+  <section class="hero">
+    <div><h2>Express yourself, one sign at a time.</h2><p>Present a hand sign to your camera. Confirm stabilized predictions to build a message, then speak it aloud. Recognition runs in your browser.</p></div>
+    <div class="privacy">◎ &nbsp; Camera video stays on your device</div>
+  </section>
+  <section class="layout">
+    <div class="card camera-card">
+      <div class="card-title"><h3>Live camera</h3><span class="live" id="liveState">OFFLINE</span></div>
+      <div class="video-frame">
+        <video id="video" autoplay muted playsinline aria-label="Live webcam"></video>
+        <canvas id="overlay" aria-hidden="true"></canvas>
+        <div class="camera-blank" id="cameraBlank"><div class="camera-icon">◉</div><strong>Camera is not active</strong><span>Use the button below to enable hand tracking.</span></div>
+      </div>
+      <div class="camera-controls"><button class="primary" id="cameraBtn">Start camera</button><button id="stopBtn" disabled>Stop camera</button></div>
+      <p class="status" id="status" role="status">Ready to load the models. HTTPS or localhost is required for webcam access.</p>
+    </div>
+    <div class="card recognition">
+      <div class="card-title"><h3>Recognition</h3><span class="tag">24 STATIC LETTERS</span></div>
+      <div class="prediction-label">PREDICTED LETTER</div>
+      <div class="letter" id="letter">–</div>
+      <div class="confidence"><span>Confidence</span><strong id="confidence">0%</strong></div>
+      <div class="meter"><div id="confidenceBar"></div></div>
+      <div class="stable"><span>Stable prediction</span><strong id="stableLetter">Waiting</strong></div>
+      <div class="thumb"><canvas id="cropPreview" width="112" height="112"></canvas><p>28×28 hand crop<br><small>Model input preview</small></p></div>
+      <p class="explain">Supported letters: A–I and K–Y. J and Z require movement and are not included.</p>
+    </div>
+  </section>
+  <section class="card compose">
+    <div class="card-title"><h3>Your message</h3><span class="tag">COMPOSE &amp; SPEAK</span></div>
+    <textarea id="message" placeholder="Recognized letters appear here. You can also type or edit a message." aria-label="Message" spellcheck="false"></textarea>
+    <div class="actions">
+      <button class="primary" id="addBtn">+ Add stable letter</button>
+      <button id="spaceBtn">Space</button>
+      <button id="backspaceBtn">Backspace</button>
+      <button id="speakBtn">Speak</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+    <div class="keyboard-hint">Keyboard: Enter to confirm · Space to insert space · Backspace to delete · V to speak · C to clear</div>
+  </section>
+  <footer><p><b>Research prototype.</b> Predictions may be wrong and should not be used for critical communication. This is not continuous ASL grammar translation. Independent webcam accuracy has not been established.</p><p>Portfolio adaptation finalized 15 November 2026. Original implementation and model: <a href="https://github.com/tayyabastack/signframe-ai" target="_blank" rel="noopener noreferrer">Tayyaba Ilyas</a>. Web packaging: Jean Aimé Iraguha.</p></footer>
+</main>
+<script type="module" src="./app.js"></script>
+</body></html>

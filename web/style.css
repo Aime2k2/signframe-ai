@@ -1,0 +1,25 @@
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#e9f1ed;background:#101b20}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top left,#18392e55,transparent 45%),#101b20;min-height:100vh}
+button,textarea{font:inherit}button{cursor:pointer;border:1px solid #34433e;background:#25342f;color:#eaf4eb;border-radius:10px;padding:11px 16px;font-weight:650;transition:.15s}
+button:hover:not(:disabled){background:#334b41}button:disabled{opacity:.4;cursor:not-allowed}button.primary{color:#10291d;background:#88edac;border-color:#88edac}button.primary:hover:not(:disabled){background:#aff7c7}
+.app{max-width:1160px;margin:0 auto;padding:30px 24px 40px}.topbar{display:flex;align-items:center;gap:14px}
+.mark{display:grid;place-items:center;width:50px;height:50px;border-radius:14px;background:#88edac;color:#123023;font-weight:900;font-size:19px;letter-spacing:-3px}
+.mark span{color:#52896c}.brand{flex:1}.brand h1{font-size:22px;letter-spacing:-.8px;margin:0}.brand h1 em{font-style:normal;color:#88edac}.brand p{font-size:12px;color:#a4b6ad;margin:2px 0}
+.beta,.tag{font-size:11px;font-weight:700;letter-spacing:.6px;color:#9ee2b6;border:1px solid #3b6850;border-radius:99px;padding:7px 11px}
+.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;padding:52px 0 28px}.hero h2{max-width:650px;font-size:clamp(29px,3.5vw,43px);letter-spacing:-1.7px;line-height:1.12;margin:0 0 16px}.hero p{max-width:700px;line-height:1.65;color:#afbeb5;margin:0}
+.privacy{flex-shrink:0;font-size:12px;color:#9ab5a3;background:#20392e;border-radius:10px;padding:12px}
+.layout{display:grid;grid-template-columns:1.6fr 1fr;gap:20px}.card{background:#19272b;border:1px solid #304342;border-radius:17px;padding:21px;box-shadow:0 15px 30px #07100e30}
+.card-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:19px}.card-title h3{font-size:17px;margin:0}.live{font-size:11px;font-weight:800;letter-spacing:1px;color:#b3b8b6}.live.on{color:#88edac}
+.video-frame{position:relative;aspect-ratio:16/10;background:#0c171a;border-radius:12px;overflow:hidden;border:1px solid #2e393c}
+.video-frame video,.video-frame canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.video-frame video{transform:scaleX(-1)}.video-frame canvas{pointer-events:none}
+.camera-blank{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#bccfc0;text-align:center;padding:20px}.camera-blank.hidden{display:none}.camera-blank span{font-size:13px;color:#8d9c95}.camera-icon{font-size:53px;color:#88edac}
+.camera-controls{display:flex;gap:12px;margin-top:15px}.status{font-size:13px;color:#b1c4b7;min-height:30px}
+.prediction-label{font-size:12px;letter-spacing:.9px;color:#9cb0a6}.letter{font-size:92px;text-align:center;font-weight:800;line-height:1.5;color:#8fecaf}
+.confidence{display:flex;justify-content:space-between;font-size:13px;color:#b4c4ba}.confidence strong{color:#eaf4ed}.meter{height:8px;background:#2c3c37;border-radius:8px;overflow:hidden;margin:11px 0 23px}.meter>div{height:100%;background:#88edac;width:0;transition:.18s}
+.stable{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #344240;padding-top:20px;color:#adbbaf;font-size:13px}.stable strong{color:#a3eeab;font-size:19px}
+.thumb{display:flex;align-items:center;gap:15px;background:#142126;border-radius:11px;padding:14px;margin-top:24px}.thumb canvas{height:84px;width:84px;border:1px solid #5b645e;image-rendering:pixelated}.thumb p{font-size:13px;color:#dcece1}.thumb small{color:#90a397}.explain{font-size:12px;color:#98aba0;line-height:1.6}
+.compose{margin-top:20px}.compose textarea{width:100%;min-height:100px;border:1px solid #3b4f48;outline:none;resize:vertical;background:#112023;color:#f1f7f4;border-radius:10px;padding:17px;line-height:1.5}.compose textarea:focus{border-color:#88edac}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.keyboard-hint{font-size:12px;color:#8fa79a;margin-top:18px}
+footer{padding:23px 0;color:#93a99c;font-size:12px;line-height:1.5}footer a{color:#a4efb9}
+@media(max-width:810px){.hero{padding-top:34px;display:block}.privacy{display:inline-block;margin-top:20px}.layout{grid-template-columns:1fr}.letter{font-size:76px}}
+@media(max-width:550px){.app{padding:20px 12px}.topbar{gap:10px}.beta{display:none}.brand p{font-size:10px}.card{padding:15px}.actions button{flex-grow:1}.hero h2{font-size:29px}}

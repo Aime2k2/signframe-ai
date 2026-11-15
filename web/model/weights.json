@@ -1,0 +1,97 @@
+{
+  "format": "signframe-cnn-f32-v1",
+  "source": "feedback_candidate.pth",
+  "architecture": "SignLanguageCNN",
+  "layers": {
+    "features.0.weight": {
+      "offset": 0,
+      "count": 288,
+      "shape": [
+        32,
+        1,
+        3,
+        3
+      ]
+    },
+    "features.0.bias": {
+      "offset": 288,
+      "count": 32,
+      "shape": [
+        32
+      ]
+    },
+    "features.3.weight": {
+      "offset": 320,
+      "count": 18432,
+      "shape": [
+        64,
+        32,
+        3,
+        3
+      ]
+    },
+    "features.3.bias": {
+      "offset": 18752,
+      "count": 64,
+      "shape": [
+        64
+      ]
+    },
+    "classifier.1.weight": {
+      "offset": 18816,
+      "count": 401408,
+      "shape": [
+        128,
+        3136
+      ]
+    },
+    "classifier.1.bias": {
+      "offset": 420224,
+      "count": 128,
+      "shape": [
+        128
+      ]
+    },
+    "classifier.4.weight": {
+      "offset": 420352,
+      "count": 3072,
+      "shape": [
+        24,
+        128
+      ]
+    },
+    "classifier.4.bias": {
+      "offset": 423424,
+      "count": 24,
+      "shape": [
+        24
+      ]
+    }
+  },
+  "labels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y"
+  ]
+}
